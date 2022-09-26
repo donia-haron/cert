@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Blockchain certificate</title>
+
+
+    <style>
+        @font-face {
+            font-family: 'Almarai';
+            src: url(./fonts/Almarai/Almarai-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: 'Rubik';
+            src: url(./fonts/Rubik/Rubik-Regular.ttf);
+        }
+
+        .font-ar {
+            font-family: 'Almarai';
+        }
+
+        .font-en {
+            font-family: 'Rubik';
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        main {
+            position: relative;
+            width: 210mm;
+            height: 297mm;
+            padding: 6mm 10mm;
+            margin: 1mm auto;
+            border: 1px #D3D3D3 solid;
+            background: url('images/bg.svg');
+            background-size: cover;
+            box-shadow: 0 0 10px black;
+        }
+
+        .header {
+            color: rgb(128, 128, 128);
+            font-size: 20px;
+        }
+
+        .logo {
+            width: 116px;
+            position: relative;
+            top: -10px;
+        }
+
+        .name-left {
+            padding: 0px 48px 0 0;
+        }
+
+        .lines {
+            height: 21px;
+        }
+
+        .heart {
+            width: 420px;
+        }
+
+        .name-right {
+            padding: 0 0 0 120px;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .line-h {
+            line-height: 27px;
+        }
+
+        .footer {
+            font-size: 14px;
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            right: 10px;
+            padding: 0 22px;
+        }
+
+        .footer img {
+            width: 113px;
+        }
+
+
+        .logo2 {
+            width: 200px !important;
+            position: relative;
+            top: 60px;
+        }
+
+        .header-right .logo {
+            width: 100px !important;
+            height: 110px;
+            position: relative;
+            top: -12px;
+        }
+
+
+
+        .header-middle {
+            position: relative;
+            left: -15px;
+            top: -20px;
+        }
+
+        .qr-b {
+            width: 150px;
+        }
+
+
+        .overlayer {
+            background: rgba(3, 98, 240, 0.7);
+            border-radius: 8px;
+            color: white;
+            min-height: 560px;
+        }
+
+        .heart-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -16%);
+            z-index: -1;
+            height: 300px;
+            width: 550px;
+        }
+
+        .rotate {
+            transform: rotate(-90deg);
+            font-size: 13px;
+            position: relative;
+            left: -41px;
+            top: 8px;
+        }
+
+        .font-small {
+            font-size: 14px;
+        }
+
+        p.font-weight-bold {
+            font-size: 15px !important;
+        }
+
+        @media screen {
+
+            @media(max-width:767px) {
+                * {
+                    font-size: 12px !important;
+                }
+
+                .logo {
+                    transform: scale(0.7);
+                    width: 150px;
+                    position: relative;
+
+                }
+
+                main {
+                    width: 100% !important;
+                }
+
+                .right,
+                .left {
+                    text-align: center !important;
+                }
+
+                .name-left,
+                .name-right {
+                    padding: 0;
+                }
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 100%;
+            }
+
+            main {
+                margin: 0 !important;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                height: 100%;
+                page-break-after: always;
+                font-size: 24.5px;
+
+            }
+
+            .font-small {
+                font-size: 18px;
+            }
+
+
+            .logo {
+                width: 150px;
+            }
+
+            .header-left,
+            .header-right {
+                font-size: 27px !important;
+            }
+
+            .line-h {
+                line-height: 35px !important;
+            }
+
+            .logo2 {
+                position: relative;
+                top: 80px;
+            }
+
+            .owners {
+                background-size: 100% 100%;
+                height: 290px;
+
+            }
+
+            .certificate {
+                font-size: 32px !important;
+            }
+
+            .logo-print {
+                width: 110px;
+            }
+
+            .heart-container {
+                height: 450px;
+                width: 550px;
+            }
+
+            .overlayer {
+                position: relative;
+                top: 20px;
+            }
+
+            .header {
+                margin-bottom: 20px;
+            }
+
+            .fp {
+                width: 220px;
+            }
+
+            .qr-b {
+                width: 210px;
+            }
+
+            .footer {
+                bottom: 10px;
+                padding: 0 22px;
+            }
+
+            .eth {
+                font-size: 20px;
+            }
+
+            .res {
+                font-size: 14px !important;
+            }
+
+            main .lo {
+                min-height: 90px;
+                font-size: 18px !important;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="d-flex header justify-content-between mt-4 ">
+            <div class="header-left">
+                <img class="logo" src="images/logo.svg" alt="logo">
+
+            </div>
+            <div class="header-middle text-center">
+                <img class="lines" src="images/lines.svg" alt="lines">
+                <br>
+                <p class="m-0 certificate font-en">
+                    Certificate of
+                    <br>
+                    intellectual property
+                </p>
+                <img src="images/attatch-s.svg" alt="attatch" style="width: 20px;">
+                <br>
+                <img src="images/line.svg" alt="line">
+
+            </div>
+            <div class="header-right text-right">
+                <img class="logo" src="images/logo6.svg" alt="logo">
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                Name
+                <br>
+                <span class="font-weight-bold">
+                    {{request.englishName}}
+
+
+                </span>
+            </div>
+            <div class="col-sm-6 text-right">
+
+                Digital file name
+                <br>
+                <span class="font-weight-bold">
+                    {{request.fileName}}
+                </span>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-sm-6">
+                ID
+                <br>
+                <span class="font-weight-bold">
+                    {{request.englishID}}
+                </span>
+
+            </div>
+            <div class="col-sm-6 text-right">
+                Submission date
+                <br>
+                <span class="font-weight-bold">
+                    {{request.englishDate}}
+                </span>
+            </div>
+        </div>
+
+        <div class="content my-4 font-en">
+            <div class="row overlayer py-4 pl-3">
+                <div class="col-sm-8">
+                    <p class="mt-2 mb-0">
+                        Blockchain Transaction Hash
+
+                    </p>
+                    <p class="font-weight-bold lo">
+                            {{request.transactionHash}}
+                    </p>
+                    <p class="mb-0">
+                        <span class="font-small">
+                            File Cryptographic Hash (SHA-512)
+                        </span>
+                        <br>
+
+
+                    </p>
+                    <p class="font-weight-bold lo">
+                            {{request.fileHash}}
+                    </p>
+
+
+                </div>
+
+                <div class="col-sm-4">
+
+                    <div class="mt-2  align-items-center">
+                        <div>
+                            <img src="{{request.transactionHashQRCodePath}}" class="qr-b" alt="QR">
+                        </div>
+
+                    </div>
+                    <div>
+                        <p class="font-small fp">
+                            Use this QR code to read
+                            <br>
+                            the Blockchain ID string
+                            <br>
+                            data in case of ambiguity.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-8 mt-3">
+
+                    <div class="d-flex">
+                    <div>
+                        <span class="font-small">
+                                Blockchain ID String
+                        </span>
+                            <br>
+                        <span class="font-weight-bold">
+
+                            {{request.blockchainIDString}}
+                        </span>
+                    </div>
+<!--                        <div>-->
+<!--                            <span class="font-small">-->
+<!--                                Blockchain ID String-->
+<!--                            </span>-->
+<!--                            <br>-->
+<!--                            <span class="font-weight-bold">-->
+<!--                                Name-->
+<!--                            </span>-->
+<!--                            <br>-->
+<!--                            Moamen mahmoudi-->
+<!--                            <br>-->
+<!--                            Mohamed elazazi Mohamed Abdalla-->
+<!--                            <br>-->
+<!--                            <span class="font-weight-bold">-->
+<!--                                Email-->
+<!--                            </span>-->
+<!--                            <br>-->
+<!--                            mahmoudimomen3@gmail.com-->
+
+<!--                        </div>-->
+                        <div>
+
+                            <span class="font-small">
+                                Blockchain
+                            </span>
+                            <br>
+                            <span class="font-weight-bold eth">
+                                Ethereum Ropsten
+                            </span>
+                        </div>
+                    </div>
+<!--                    <p class="font-small mt-3 res">-->
+<!--                        * The resulting ID hash was written into a blockchain transaction and has been derived-->
+
+<!--                        using the following formula: SHA-256([ID] + [Salt])-->
+
+<!--                        where: [ID] represents Blockchain ID string [Salt] represents Cryptographic salt SHA-256 is the-->
+<!--                        SHA-256-->
+
+<!--                        hashing function-->
+<!--                    </p>-->
+
+                </div>
+
+
+                <div class="col-sm-4 mt-3">
+
+                    <div class="mt-2  align-items-center">
+                        <div>
+                            <img src="{{request.fileHashQRCodePath}}" class="qr-b" alt="QR">
+                        </div>
+
+                    </div>
+                    <div>
+                        <p class="font-small fp">
+                            Use this QR code to read
+                            <br>
+                            the File Cryptographic
+                            <br>
+                            data in case of ambiguity.
+                        </p>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="text-center heart-container">
+            <img class="heart w-100 h-100" src="images/heart2.svg" alt="image">
+        </div>
+
+        <div class="row footer justify-content-between mt-5">
+
+            <div>
+                <p class="font-en">
+                    This is to certify that the person identified to
+                    <br>
+                    iprotect-mena.com with the email address
+                    <br>
+                    {{request.englishEmail}} has uploaded a file
+                    <br>
+                    to iprotect-mena.com with the digital fingerprint
+                    <br>
+                    (listed above) with the intent to verify their possession
+                    <br>
+                    of the file at the noted time and date
+                    above.
+                </p>
+            </div>
+            <div class="d-flex flex-row-reverse " style="float: right;">
+                <div>
+                    <img src="{{request.QRCodePath}}" alt="QR">
+                </div>
+                <div class="mx-2 text-right">
+                    <p class="font-ar">
+                        هذا الكود یحتوى على بیانات
+                        <br>
+                        الختم الزمنى للملف التشفیر
+                    </p>
+
+                    <p class="font-en">
+                        This QR code contains the
+                        <br>
+                        encryption information
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        @font-face {
+            font-family: 'Almarai';
+            src: url(./fonts/Almarai/Almarai-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: 'Rubik';
+            src: url(./fonts/Rubik/Rubik-Regular.ttf);
+        }
+
+        .font-ar {
+            font-family: 'Almarai';
+        }
+
+        .font-en {
+            font-family: 'Rubik';
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        main {
+            position: relative;
+            width: 210mm;
+            height: 297mm;
+            padding: 6mm 10mm;
+            margin: 1mm auto;
+            border: 1px #D3D3D3 solid;
+            background: url('images/bg.svg');
+            background-size: cover;
+            box-shadow: 0 0 10px black;
+        }
+
+        .header {
+            color: rgb(128, 128, 128);
+            font-size: 20px;
+        }
+
+        .logo {
+            width: 107px;
+            height: 112px;
+            position: relative;
+            top: -11px;
+        }
+
+
+        .name-left {
+            padding: 0px 48px 0 0;
+        }
+
+        .heart {
+            width: 420px;
+        }
+
+        .name-right {
+            padding: 0 0 0 120px;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        .lines {
+            height: 21px;
+        }
+
+        .line-h {
+            line-height: 27px;
+        }
+
+        .footer {
+            font-size: 14px;
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            right: 10px;
+            padding: 0 10px;
+        }
+
+        .footer img {
+            width: 113px;
+        }
+
+
+        .logo2 {
+            width: 200px !important;
+            height: 50px !important;
+            position: relative;
+
+        }
+
+        .header-right .logo {
+            width: 180px !important;
+            height: 100px;
+            position: relative;
+            top: -3px;
+        }
+
+
+        .header-middle {
+            position: relative;
+            top: -16px;
+            left: 13px;
+        }
+
+        .heart-container {
+            position: absolute;
+            left: 50%;
+            top: 33%;
+            transform: translate(-50%, 0);
+            z-index: -1;
+            height: 300px;
+            width: 450px;
+        }
+
+        @media screen {
+
+            @media(max-width:767px) {
+
+                * {
+                    font-size: 12px !important;
+                }
+
+                .logo {
+                    transform: scale(0.7);
+                    width: 150px;
+                    position: relative;
+                    top: -26px;
+                }
+
+                main {
+                    padding: 0;
+                    width: 100% !important;
+                }
+
+                .right,
+                .left {
+                    text-align: center !important;
+                }
+
+                .name-left,
+                .name-right {
+                    padding: 0;
+                }
+            }
+
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 100%;
+            }
+
+            main {
+                margin: 0 !important;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                height: 100%;
+                page-break-after: always;
+                font-size: 24.5px !important;
+            }
+
+
+            .logo {
+                width: 150px;
+            }
+
+            .left,
+            .right {
+                font-size: 21px !important;
+            }
+
+            .header-left,
+            .header-right {
+                font-size: 27px !important;
+            }
+
+            .line-h {
+                line-height: 35px !important;
+            }
+
+            .logo2 {
+                position: relative;
+                top: 80px;
+            }
+
+
+            .owners {
+                background-size: 100% 100%;
+                height: 290px;
+
+            }
+
+            .certificate {
+                font-size: 32px !important;
+            }
+
+            .logo-print {
+                width: 110px;
+            }
+
+            .heart-container {
+                height: 450px;
+                width: 550px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="d-flex header justify-content-between my-4">
+            <div class="header-left">
+                <img class="logo logo-print" src="images/logo2.png" alt="logo">
+
+            </div>
+            <div class="header-middle text-center">
+                <img class="lines" src="images/lines.svg" alt="lines">
+                <br>
+                <p class="m-0 certificate font-en">
+                    Certificate of
+                    <br>
+                    intellectual property
+                </p>
+                <img src="images/attatch-s.svg" alt="attatch" style="width: 20px;">
+                <br>
+                <img src="images/line.svg" alt="line">
+
+            </div>
+            <div class="header-right text-right">
+                <img class="logo" src="images/logo5.svg" alt="logo">
+            </div>
+
+        </div>
+
+        <div class="mt-5 text-center bg font-en">
+            <p class="font-weight-bold">
+                CERTIFICATE ID: WDTS-PC-00000363
+            </p>
+            <p>
+                The world intellectual property organiziation hereby
+                <br>
+                certifies that on 11:37 09.04.2020 UTC, Music Record
+                <br>
+                Label, (”the Possessor”) had possession of the digital
+                <br>
+                file described below.1
+            </p>
+            <p>
+                Digital file name:
+                <br>
+                <span class="font-weight-bold">
+                    Lorem ipsum dollar is ami.pdf
+                </span>
+
+            </p>
+            <p>
+
+                Digital fingerprint of the file:
+                <br>
+                <span class="font-weight-bold">
+                    bd0fdbf0811dd9f3c3a85b1aca5a9b3be310f7d36c96327728ca525b3cfc502f
+                </span>
+            </p>
+            <p>
+                This certificate was issued on 09.04.2020 11:39 UTC upon presentation of
+                <br>
+                the digital file and its related WIPO PROOF token.
+            </p>
+            <p>
+                Serial number: 00F2DC54E90E10B33751E67DAEE4A45A7D61A56AA1
+            </p>
+            <p>
+                Policy: 1.3.6.1.4.1.15819.5.2.2
+            </p>
+
+            <p class="font-weight-bold">
+                Timestamping Authority: O = World Intellectual Property Organization |
+                <br>
+                CN = WIPO Timestamping Unit 007 | OU = 001 43912916400026 | C = CH
+            </p>
+            <p>
+                The request to timestamp the digital file was filed to WIPO by John SMITH,
+                <br>
+                Producer, acting on behalf of the Possessor.
+            </p>
+
+        </div>
+
+        <div class="text-center heart-container">
+            <img class="heart w-100 h-100" src="images/heart2.svg" alt="image">
+        </div>
+
+        <div class="row footer justify-content-around">
+
+            <div class="col-md-6 d-flex align-content-center align-items-center">
+                <img class="logo2 h-100 w-100" src="images/logo4.svg">
+            </div>
+            <div class="col-md-6 d-flex flex-row-reverse " style="float: right;">
+                <div>
+                    <img src="images/qr-s.svg" alt="QR">
+
+                </div>
+                <div class="mx-2 text-right">
+                    <p class="font-ar">
+                        هذا الكود یحتوى على بیانات
+                        <br>
+                        الختم الزمنى للملف التشفیر
+                    </p>
+
+                    <p class="font-en">
+                        This QR code contains the
+                        <br>
+                        encryption information
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+
+</html>

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        @font-face {
+            font-family: 'Almarai';
+            src: url(./fonts/Almarai/Almarai-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: 'Rubik';
+            src: url(./fonts/Rubik/Rubik-Regular.ttf);
+        }
+
+        .font-ar {
+            font-family: 'Almarai';
+        }
+
+        .font-en {
+            font-family: 'Rubik';
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+        }
+
+        main {
+            position: relative;
+            width: 210mm;
+            height: 297mm;
+            padding: 6mm 10mm;
+            margin: 1mm auto;
+            border: 1px #D3D3D3 solid;
+            background: url('images/bg.svg');
+            background-size: cover;
+            box-shadow: 0 0 10px black;
+        }
+
+        .header {
+            color: #70788C;
+            font-size: 20px;
+        }
+
+        .left {
+            font-family: 'Rubik';
+            font-weight: 100;
+        }
+
+        .logo {
+            width: 108px;
+            height: auto;
+            position: relative;
+            left: -24px;
+        }
+
+        .line {
+            position: relative;
+            left: -24px;
+
+        }
+
+        .name-left {
+            /* padding: 0px 48px 0 0; */
+        }
+
+        .heart {
+            width: 420px;
+        }
+
+
+
+        .right {
+            font-family: 'Almarai';
+            text-align: right;
+        }
+
+        .line-h {
+            line-height: 27px;
+        }
+
+        .footer {
+            font-size: 14px;
+            position: absolute;
+            width: 100%;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        .footer img {
+            width: 113px;
+        }
+
+
+        .heart-container {
+            position: absolute;
+            left: 50%;
+            top: 61%;
+            transform: translate(-50%, 0);
+            z-index: -1;
+            height: 300px;
+            width: 500px;
+
+        }
+
+        .lines {
+            height: 21px;
+        }
+
+        .logo2 {
+            width: 200px !important;
+            position: relative;
+
+        }
+
+        @media screen {
+
+            @media(max-width:767px) {
+                * {
+                    font-size: 12px !important;
+                }
+
+                main {
+                    width: 100% !important;
+                    padding: 5px;
+                }
+
+                .right,
+                .left {
+                    text-align: center !important;
+                }
+
+                .name-left,
+                .name-right {
+                    padding: 0;
+                }
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 100%;
+            }
+
+            main {
+                margin: 0 !important;
+                border: initial;
+                border-radius: initial;
+                width: initial;
+                height: 100%;
+                overflow: hidden;
+                page-break-after: always;
+            }
+
+
+
+            .logo {
+                width: 150px;
+            }
+
+            .left,
+            .right {
+                font-size: 21px !important;
+            }
+
+            .header-left,
+            .header-right {
+                font-size: 28px !important;
+            }
+
+            .line-h {
+                line-height: 35px !important;
+            }
+
+            .logo2 {
+                position: relative;
+                top: 80px;
+            }
+
+            .heart-container {
+                height: 400px;
+                width: 500px;
+            }
+
+            .footer {
+                padding: 0 20px;
+                bottom: 30px;
+                right: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="d-flex header justify-content-between my-4">
+            <div class="header-left left">
+                <img class="lines" src="images/lines.svg" alt="lines">
+                <br>
+                <p class="m-0">
+                    Certificate of
+                    <br>
+                    intellectual property
+                </p>
+                <img src="images/attatch-s.svg" alt="attatch" style="width: 20px;">
+
+            </div>
+            <div class="header-middle text-center">
+                <img class="logo" src="{{request.logoPath}}" alt="logo">
+                <br>
+                <img class="line" src="images/line.svg" alt="line">
+            </div>
+            <div class="header-right text-right">
+                <img class="lines" src="images/lines.svg" alt="lines">
+                <br>
+                <p class="m-0 font-ar">
+                    شــهادة إثبـــات
+                    <br>
+                    ملكــــية فكريـــــة
+                </p>
+                <img src="images/attatch-s.svg" alt="attatch" style="width: 20px;">
+            </div>
+
+        </div>
+        <div class="row">
+
+            <div class="left  col-sm-6">
+                <p>
+                    After reviewing law 15 of 2004 of the
+                    <br>
+                    Electronic signature Law and amending
+                    <br>
+                    the Executive Regulations No. 361 of 2020
+                    <br>
+                    and adding electronic time stamp and the
+                    <br>
+                    request for approval of the electronic file
+                    <br>
+                    and the files attached to it under No. {{request.englishCertificateNumber}} of
+                    <br>
+                    {{request.englishYear}} prove that on {{request.englishDate}} at {{request.englishHour}} the content has been approved for:
+                </p>
+            </div>
+            <div class="right text-right col-sm-6 line-h">
+                <p>
+                    بعـد الإطـلاع علـى قانـون ١٥ لسـنة ٢٠٠٤ مـن قانـون
+                    <br>
+                    التوقيع الإلكتروني وتعديل اللائحة التنفيذية رقم ٣٦١
+                    <br>
+                    ســنة ٢٠٢٠ وإضافــة البصمــة الزمنيــة الإلكترونيــة
+                    <br>
+                    وعلــى طلــب المصادقــة علــى الملــف الالكترونــي
+                    <br>
+                    والملفات المرفقة به تحت رقم {{request.arabicCertificateNumber}} سنة {{request.arabicYear}} ثبت أنه
+                    <br>
+                    فــي تاريخ {{request.arabicDate}} الســاعة {{request.arabicHour}}
+                    <br>
+                    تمــت المصادقــة علــى المحتوى إلي
+
+
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-sm-6 left">
+                    <p class="m-0">
+                        Company:
+                        <span class="font-weight-bold">{{request.englishCompanyName}}
+                        </span>
+
+                    </p>
+                    <p class="m-0">
+                        Vat number:
+                        <span class="font-weight-bold">{{request.englishVATNumber}}</span>
+                    </p>
+
+                    <p class="mt-2 name-left m-0">
+                        Represented by:
+                        <span class="font-weight-bold">
+                            {{request.englishName}}
+                        </span>
+                    </p>
+                    <p>
+                    Identity document number:
+                        <span class="font-weight-bold">{{request.englishID}}</span>
+                    </p>
+                </div>
+
+
+                <div class="col-sm-6 right">
+                    <p class="m-0">
+                        شركة:
+                        <span class="font-weight-bold">{{request.arabicCompanyName}}
+                        </span>
+
+                    </p>
+                    <p class="m-0">
+                        رقم السجل الضريبي:
+                        <span class="font-weight-bold">{{request.arabicVATNumber}}</span>
+                    </p>
+                    <p class="mt-2 name-right m-0">
+                        ممثلة في:
+                        <span class="font-weight-bold">
+                            {{request.arabicName}}
+
+
+                        </span>
+                    </p>
+                    <p>
+                    رقم مستند الهوية:
+                        <span class="font-weight-bold">{{request.arabicID}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6 left">
+                <p class="mt-2">
+                    For
+                    <span class="font-weight-bold">{{request.englishCategory}}</span>
+                    <br>
+                    And it was named by the applicant
+                    <br>
+                    under the name:
+                    <br>
+                    <span class="font-weight-bold">
+                        “{{request.englishTitle}}”
+                    </span>
+                </p>
+
+            </div>
+
+
+            <div class="col-sm-6 right">
+                <p class="mt-2">
+                    عن
+                    <span class="font-weight-bold">
+
+                        {{request.arabicCategory}}
+                    </span>
+                    <br>
+                    وتم تسمیته من قبل مقدم الطلب
+                    <br>
+                    :تحت اسم
+
+                    <br>
+                    <span class="font-weight-bold">
+                        “{{request.arabicTitle}}”
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="text-center heart-container">
+            <img class="heart w-100 h-100" src="images/heart2.svg" alt="image">
+        </div>
+
+        <div class="row footer justify-content-around">
+
+            <div class="col-md-6 d-flex align-content-center align-items-center">
+                <img class="logo2 h-100 w-100" src="images/logo4.svg">
+            </div>
+            <div class="col-md-6 d-flex flex-row-reverse " style="float: right;">
+                <div>
+                    <img src="{{request.QRCodePath}}" alt="QR">
+
+                </div>
+                <div class="mx-2 text-right">
+                    <p class="font-ar">
+                        هذا الكود یحتوى على بیانات
+                        <br>
+                        الختم الزمنى للملف التشفیر
+                    </p>
+
+                    <p class="font-en">
+                        This QR code contains the
+                        <br>
+                        encryption information
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+</body>
+
+</html>
